@@ -7,19 +7,19 @@ export default {
       name: 'todo',
       tasks: [
         {
-          description: '',
+          description: 'watch Wednesday',
           name: 'first task',
           id: uuid(),
           userAssigned: null
         },
         {
-          description: '',
+          description: 'drink water',
           name: 'second task',
           id: uuid(),
           userAssigned: null
         },
         {
-          description: '',
+          description: 'buy tomatos',
           name: 'and thrid',
           id: uuid(),
           userAssigned: null
