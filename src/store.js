@@ -8,7 +8,7 @@ Vue.use(Vuex)
 const board = JSON.parse(localStorage.getItem('board')) || defaultBoard
 
 export default new Vuex.Store({
-  plugins: [ saveStatePlugin ], // <-- Use 
+  plugins: [saveStatePlugin],
   state: {
     board
   },
@@ -44,7 +44,12 @@ export default new Vuex.Store({
     },
     MOVE_TASK (state, { fromTasks, toTasks, fromTaskIndex, toTaskIndex }) {
       const taskToMove = fromTasks.splice(fromTaskIndex, 1)[0]
+      console.log('fromTasks: ', fromTasks)
+      console.log('fromTaskIndex: ', fromTaskIndex)
+      console.log('taskToMove: ', taskToMove)
+
       toTasks.splice(toTaskIndex, 0, taskToMove)
+      console.log('toTasks: ', toTasks)
     },
     MOVE_COLUMN (state, { fromColumnIndex, toColumnIndex }) {
       const columnList = state.board.columns
